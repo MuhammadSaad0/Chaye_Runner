@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://draxkvghgg26g"]
+
+[ext_resource type="Script" path="res://Coin.gd" id="1_srbbx"]
+[ext_resource type="Texture2D" uid="uid://bqpk30b5o6lqb" path="res://coin.png" id="2_oq6hr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yklmm"]
+
+[node name="Coin" type="Node3D"]
+script = ExtResource("1_srbbx")
+
+[node name="Area3D" type="Area3D" parent="." groups=["Coins"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.294535, 0, 1.09664, -4.031)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1.39436, 0, 0, 0, 1.12052, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yklmm")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D/CollisionShape3D"]
+transform = Transform3D(0.0924356, 0, 0, 0, 0.120353, 0, 0, 0, 1, 0, 0, 0)
+texture = ExtResource("2_oq6hr")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D/CollisionShape3D/Sprite3D"]
+light_color = Color(1, 1, 0, 1)
+light_energy = 3.01
+omni_range = 1.304

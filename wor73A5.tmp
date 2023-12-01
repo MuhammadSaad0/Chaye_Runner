@@ -1,0 +1,286 @@
+[gd_scene load_steps=21 format=3 uid="uid://b2p7ps80hftrg"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_rrxb7"]
+[ext_resource type="PackedScene" uid="uid://dtot5hew3j6jy" path="res://terrain_controller.tscn" id="2_34xgp"]
+[ext_resource type="AudioStream" uid="uid://4ixi0bboi40n" path="res://gnork-party-improved-171719.mp3" id="3_x4mp4"]
+[ext_resource type="PackedScene" uid="uid://co227w1g4ulck" path="res://assets/Male_LongSleeve.gltf" id="4_o4uef"]
+[ext_resource type="Script" path="res://assets/Male_LongSleeve.gd" id="5_sye58"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m13tq"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_afbxy"]
+sky_material = SubResource("ProceduralSkyMaterial_m13tq")
+
+[sub_resource type="Environment" id="Environment_sxudi"]
+background_mode = 2
+sky = SubResource("Sky_afbxy")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dy0jn"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_l5bx5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_66sxl"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4tusc"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2bg2w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pm452"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_swdpy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1kkbl"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nfnof"]
+
+[sub_resource type="Animation" id="Animation_5licv"]
+resource_name = "run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D7:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.270526, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D8:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.270526, 0, 0), Vector3(0, 0, 0), Vector3(0.270526, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -2.35619), Vector3(0.174533, 0.745256, -1.42768)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape3D4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2.07869, -1.52542, -2.05949), Vector3(0, 0, -0.780284)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape3D2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.34365, 0), Vector3(0, 1.444, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hiij5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D7:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.166312, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D8:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -2.35619)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape3D4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.780284)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape3D2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.34365, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lvdkd"]
+_data = {
+"RESET": SubResource("Animation_hiij5"),
+"run": SubResource("Animation_5licv")
+}
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sxudi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(0.801789, 0, 0, 0, 0.709436, 0, 0, 0, 0.677827, 0, 1.54898, 0)
+script = ExtResource("1_rrxb7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.11079, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_dy0jn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_l5bx5")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1.24721, 0, 0, 0, 1.21316, 0.717726, 0, -0.751196, 1.26973, 0, 3.78362, 3.79491)
+
+[node name="Area3D" type="Area3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.18007, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Area3D"]
+shape = SubResource("CapsuleShape3D_66sxl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39033, 0)
+shape = SubResource("SphereShape3D_4tusc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0183632, 0)
+mesh = SubResource("SphereMesh_2bg2w")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(-0.114221, 0.482494, 0.130127, -0.392481, -0.145385, -0.0314713, 0.00852569, -0.228673, 0.294573, 0.612467, 0.352318, -0.218123)
+shape = SubResource("CapsuleShape3D_pm452")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D3"]
+transform = Transform3D(1, 0, 0, -3.55271e-15, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_swdpy")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.29828, 0.380931, -0.102572, -0.182, 0.0292568, -0.284981, -0.220431, 0.491307, 0.0964986, -0.408, 0.35, -0.291)
+shape = SubResource("CapsuleShape3D_pm452")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D4"]
+transform = Transform3D(1, 0, 0, -3.55271e-15, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_swdpy")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.271033, 0, 0, 0, 0.68926, -0.0717231, 0, 0.104874, 0.471383, 0.291818, -1.22893, 0)
+shape = SubResource("CapsuleShape3D_1kkbl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D7"]
+mesh = SubResource("CapsuleMesh_nfnof")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.283413, 0, 0, 0, 0.692218, -0.056857, 0, 0.0831368, 0.473406, -0.318007, -1.22893, 0)
+shape = SubResource("CapsuleShape3D_1kkbl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D8"]
+mesh = SubResource("CapsuleMesh_nfnof")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+autoplay = "run"
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_lvdkd")
+}
+
+[node name="TerrainController" parent="." instance=ExtResource("2_34xgp")]
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 112.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Coins" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 40.0
+offset_right = 125.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Rupees: 0"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.085201, 0, 1.61363)
+stream = ExtResource("3_x4mp4")
+autoplay = true
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="Chaser" parent="CharacterBody3D" instance=ExtResource("4_o4uef")]
+transform = Transform3D(-0.00769813, 0, -5.96763e-10, 0, 0.00681634, 0, 6.72992e-10, 0, -0.00682617, 0, 0, 1.79004)
+script = ExtResource("5_sye58")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://3jpg78m55g76"]
+
+[ext_resource type="Texture2D" uid="uid://ka2r6t8eylq" path="res://speedtea.png" id="1_io47d"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wojqm"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Area3D" type="Area3D" parent="." groups=["SpeedBoost"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.294535, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_wojqm")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D/CollisionShape3D"]
+transform = Transform3D(1.60256, 0, 0, 0, 1.54488, 0, 0, 0, 0.922259, 0.177902, 0.188487, 0)
+texture = ExtResource("1_io47d")

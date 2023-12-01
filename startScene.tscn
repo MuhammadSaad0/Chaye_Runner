@@ -1,0 +1,265 @@
+[gd_scene load_steps=16 format=3 uid="uid://bl174bt2je4v3"]
+
+[ext_resource type="Script" path="res://StartingAnimation.gd" id="1_3h8xn"]
+[ext_resource type="AudioStream" uid="uid://gx007y41sner" path="res://bruh.mp3" id="1_s3nh8"]
+[ext_resource type="PackedScene" uid="uid://ek3fwkkeexnm" path="res://terrain_blocks/terrain_1.tscn" id="3_88tr5"]
+[ext_resource type="PackedScene" uid="uid://co227w1g4ulck" path="res://assets/Male_LongSleeve.gltf" id="4_loh4k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rrhmx"]
+albedo_color = Color(0.282353, 0.211765, 0, 0.580392)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qa1f2"]
+material = SubResource("StandardMaterial3D_rrhmx")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bndb7"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nq7vx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pjq3j"]
+
+[sub_resource type="Animation" id="Animation_6uvfg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.770693, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.773708, 1.05983, 0.187411)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MeshInstance3D2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label3D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_g3ltj"]
+resource_name = "scene"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [75.0, 41.0, 35.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.649262, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 3.2, 3.4, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.770693, 0), Vector3(0, 1.271, 0), Vector3(0, 0.771, 0), Vector3(0, 0.771, 0), Vector3(0, 0.771, -13.2572)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 3.2, 3.4, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.773708, 1.05983, 0.187411), Vector3(0.774, 1.36, 0.187), Vector3(0.774, 1.06, 0.187), Vector3(0.774, 1.06, 0.187), Vector3(0.774, 1.06, -13.2283)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MeshInstance3D2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.4, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label3D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer3D")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_s3nh8")
+}],
+"times": PackedFloat32Array(3)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5c2x"]
+_data = {
+"RESET": SubResource("Animation_6uvfg"),
+"scene": SubResource("Animation_g3ltj")
+}
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nj35b"]
+sky_top_color = Color(0.160784, 0.454902, 0.768627, 1)
+sky_horizon_color = Color(0.92549, 0.909804, 0.65098, 1)
+ground_horizon_color = Color(0.968627, 0.952941, 0.764706, 1)
+
+[sub_resource type="Sky" id="Sky_afbxy"]
+sky_material = SubResource("ProceduralSkyMaterial_nj35b")
+
+[sub_resource type="Environment" id="Environment_fgoc3"]
+background_mode = 2
+background_color = Color(0.792157, 0, 0, 1)
+sky = SubResource("Sky_afbxy")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="startScene" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.25053, 0, 0, 0, 0.325548, 0, 0, 0, -41.6014, 0, 0, 0)
+mesh = SubResource("BoxMesh_qa1f2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.772065, 0, 0, 0, 0.669231, 0, 0, 0, 0.753479, 0, 0.770693, 0)
+mesh = SubResource("CapsuleMesh_bndb7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.772065, 0, 0, 0, 0.669231, 0, 0, 0, 0.753479, 3.1211, 0.770693, 0.291984)
+visible = false
+mesh = SubResource("CapsuleMesh_bndb7")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35813, 4.38675)
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.505153, 0, 0, 0, 0.0392642, 0, 0, 0, 0.509294, 0.773708, 1.05983, 0.187411)
+mesh = SubResource("CylinderMesh_nq7vx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D4"]
+transform = Transform3D(0.14618, 0, 0, 0, 2.37322, 0, 0, 0, 0.245296, -0.135166, 2.74549, 0.170544)
+mesh = SubResource("BoxMesh_pjq3j")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D4"]
+transform = Transform3D(0.14618, 0, 0, 0, 2.37322, 0, 0, 0, 0.245296, 0.284428, 2.74549, 0.0750344)
+mesh = SubResource("BoxMesh_pjq3j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "scene"
+libraries = {
+"": SubResource("AnimationLibrary_b5c2x")
+}
+script = ExtResource("1_3h8xn")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fgoc3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.46793, 0, -0.883766, 0, 1, 0, 0.883766, 0, 0.46793, 3.1031, 2.30022, 0.184285)
+visible = false
+text = "Deliver this ASAP or you're fired buddy!"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0.0928812, 0.771, 0.410688)
+
+[node name="Terrain_0" parent="." instance=ExtResource("3_88tr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.56661, 0, 0.0293999, -46.9739)
+
+[node name="Owner" parent="." instance=ExtResource("4_loh4k")]
+transform = Transform3D(0.00139231, 0, -0.00763465, 0, 0.0036963, 0, 0.00362236, 0, 0.00293449, 3.16145, 0.201143, 0.397743)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

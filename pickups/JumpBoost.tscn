@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmabygu82pqf1"]
+
+[ext_resource type="Texture2D" uid="uid://b27wtw8yqkj4o" path="res://jumptea.png" id="1_605bb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_milwi"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Area3D" type="Area3D" parent="." groups=["JumpBoost"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.294535, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_milwi")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D/CollisionShape3D"]
+transform = Transform3D(1.34437, 0, 0, 0, 1.47528, 0, 0, 0, 1, 0.142715, 0.213878, -0.118402)
+texture = ExtResource("1_605bb")

@@ -1,0 +1,119 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0nm1wnku8y4n"]
+
+[ext_resource type="PackedScene" uid="uid://mai6yafcdoxw" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_A.gltf" id="2_jvxlo"]
+[ext_resource type="PackedScene" uid="uid://bxaio1aur3xgq" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_sedan.gltf" id="3_wcdvq"]
+[ext_resource type="PackedScene" uid="uid://c1b8ypuawiu8s" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_hatchback.gltf" id="4_xq5xg"]
+[ext_resource type="Texture2D" uid="uid://chgp14ed6ivr2" path="res://seamless-cracked-texture-for-photoshop.jpg" id="7_et7hq"]
+[ext_resource type="PackedScene" uid="uid://dtd3cenbwlk2o" path="res://assets/vlc.gltf" id="7_ixebm"]
+[ext_resource type="PackedScene" uid="uid://bgawn8u0ecgw2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/watertower.gltf" id="8_cnlhr"]
+[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/car.gltf" id="8_vcd1v"]
+[ext_resource type="PackedScene" uid="uid://ma5m7bmjqs5b" path="res://assets/trash_bag.gltf" id="9_86k5w"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vd85v"]
+size = Vector2(100, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_otswq"]
+data = PackedVector3Array(50, 0, 10, -50, 0, 10, 50, 0, -10, -50, 0, 10, -50, 0, -10, 50, 0, -10)
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_d226f"]
+map_width = 24
+map_depth = 11
+map_data = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_564wm"]
+
+[node name="Terrain_0" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0293999, -8.88995)
+mesh = SubResource("PlaneMesh_vd85v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_otswq")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0195987, 0.999167, 0.0357996, -9.37706e-10, 0.0358065, -0.999359, -0.999808, 0.0195863, 0.000701759, -12.5111, 4.22468, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, -1.86265e-09, -5.82077e-11, 0, 1, -1.54887e-09, 5.82077e-11, -1.42427e-09, 1, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_d226f")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0195987, 0.999167, 0.0357996, -9.37706e-10, 0.0358065, -0.999359, -0.999808, 0.0195863, 0.000701759, 8.74035, 4.22468, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, -1.86265e-09, -5.82077e-11, 0, 1, -1.54887e-09, 5.82077e-11, -1.42427e-09, 1, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_d226f")
+
+[node name="trafficlight_A" parent="." instance=ExtResource("2_jvxlo")]
+transform = Transform3D(8.4527, 0, 0, 0, 8.76317, 0, 0, 0, 1.94947, 0, 0, 0)
+
+[node name="car_sedan" parent="." instance=ExtResource("3_wcdvq")]
+transform = Transform3D(-6.64896, 0, -3.81612e-07, 0, 7.59439, 0, 5.81271e-07, 0, -4.36513, -4.25622, 0.408623, 5.67193)
+
+[node name="car_hatchback" parent="." instance=ExtResource("4_xq5xg")]
+transform = Transform3D(-1.70007e-07, 0, 5.14696, 0, 7.17878, 0, -3.88931, 0, -2.24981e-07, -8.11223, 0.366149, 0)
+
+[node name="Area3D" type="Area3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(2.15453, 0, 0, 0, 3.02608, 0, 0, 0, 4.09199, -4.1665, 0.872784, 5.59735)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_564wm")
+
+[node name="Area3D2" type="Area3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(-4.37114e-08, 0, -4.09199, 0, 3.02608, 0, 1, 0, -1.78867e-07, -8.20526, 0.872784, 0.0179291)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+shape = SubResource("BoxShape3D_564wm")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 0.33046, 0, 0, 0, 0.24438, 1.1606, 1.65858, -1.98033)
+light_color = Color(1, 0, 0, 1)
+omni_range = 3.02
+
+[node name="vlc" parent="." instance=ExtResource("7_ixebm")]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 4.59021, 0.200498, 0)
+
+[node name="car" parent="." instance=ExtResource("8_vcd1v")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 14.0557, 0, 3.945)
+
+[node name="trash_bag" parent="." instance=ExtResource("9_86k5w")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13.4641, 0, 9.02671)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.574442, 0, 0, 0, -1.07905e-08, 0.662416, 0, -0.246858, -2.89551e-08, -1.565, 0.0886431, -7.02795)
+flip_h = true
+flip_v = true
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+texture = ExtResource("7_et7hq")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.574442, 0, 0, 0, -1.07905e-08, 0.662416, 0, -0.246858, -2.89551e-08, -1.565, 0.0886431, -1.38983)
+flip_h = true
+flip_v = true
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+texture = ExtResource("7_et7hq")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(1.11706, 0, 0, 0, -3.87828e-08, 0.662416, 0, -0.887247, -2.89551e-08, -30.3673, 0.0886431, 0.186384)
+flip_h = true
+flip_v = true
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+texture = ExtResource("7_et7hq")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(1.22717, 0, 0, 0, -3.87828e-08, 0.662416, 0, -0.887247, -2.89551e-08, 29.4665, 0.0886431, 0.186384)
+flip_h = true
+flip_v = true
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+texture = ExtResource("7_et7hq")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(0.574442, 0, 0, 0, -1.67788e-08, 0.662416, 0, -0.383854, -2.89551e-08, -1.565, 0.0886431, 5.86403)
+flip_h = true
+flip_v = true
+modulate = Color(0.627451, 0.627451, 0.627451, 1)
+texture = ExtResource("7_et7hq")
+
+[node name="watertower" parent="." instance=ExtResource("8_cnlhr")]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, -37.7453, -0.0293989, -2.96279)

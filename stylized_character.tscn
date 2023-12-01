@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://1x74ckmls68e"]
+
+[ext_resource type="PackedScene" uid="uid://p2nwrgtyjx7b" path="res://StylizedCharacter.glb" id="1_hvfp1"]
+
+[node name="StylizedCharacter" instance=ExtResource("1_hvfp1")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, -0.519757, -0.0807422)
+bones/2/rotation = Quaternion(0.00159402, 0.00708218, 0.021672, 0.999739)
+bones/6/rotation = Quaternion(0.148311, -0.169411, -0.606607, 0.762451)
+bones/7/rotation = Quaternion(0.569649, -5.28422e-09, -1.01182e-07, 0.821888)
+bones/8/rotation = Quaternion(0.439434, 9.16252e-09, -7.36414e-08, 0.898275)
+bones/9/rotation = Quaternion(-0.306933, -0.102567, 0.121525, 0.938352)
+bones/11/rotation = Quaternion(-0.379794, -0.0839602, -0.199056, 0.899489)
+bones/14/rotation = Quaternion(1.19045e-09, 2.23803e-09, -0.465666, 0.884961)
+bones/15/rotation = Quaternion(0, 1.2219e-09, -0.50365, 0.863907)
+bones/16/rotation = Quaternion(1.73935e-09, 7.11179e-18, -0.533865, 0.845569)
+bones/18/rotation = Quaternion(-2.28586e-10, 2.23802e-09, -0.465666, 0.884961)
+bones/19/rotation = Quaternion(-1.46899e-09, -1.33867e-09, -0.50365, 0.863907)
+bones/20/rotation = Quaternion(4.01565e-10, 4.31389e-10, -0.533865, 0.845569)
+bones/22/rotation = Quaternion(-2.28587e-10, 2.23803e-09, -0.465666, 0.884961)
+bones/23/rotation = Quaternion(-1.46898e-09, -1.33867e-09, -0.50365, 0.863907)
+bones/24/rotation = Quaternion(4.01565e-10, 4.31389e-10, -0.533865, 0.845569)
+bones/26/rotation = Quaternion(-2.28586e-10, 2.23802e-09, -0.465666, 0.884961)
+bones/27/rotation = Quaternion(-1.46899e-09, -1.33867e-09, -0.50365, 0.863907)
+bones/28/rotation = Quaternion(2.82251e-10, 1.33778e-09, -0.533865, 0.845569)
+bones/32/rotation = Quaternion(-0.434029, -0.249703, 0.555171, 0.664117)
+bones/33/rotation = Quaternion(0.400392, 6.27719e-09, 3.65645e-08, 0.916344)
+bones/34/rotation = Quaternion(0.253212, 8.74651e-09, 1.2625e-08, 0.967411)
+bones/35/rotation = Quaternion(-0.245208, -0.0545408, 0.116097, 0.960947)
+bones/37/rotation = Quaternion(-0.440952, 0.000534321, 0.00126678, 0.897528)
+bones/40/rotation = Quaternion(-9.14967e-09, 1.78798e-08, 0.755864, 0.654728)
+bones/41/rotation = Quaternion(-6.10451e-10, 7.84405e-09, 0.312736, 0.949839)
+bones/42/rotation = Quaternion(1.36697e-08, -3.08724e-09, 0.378686, 0.925524)
+bones/44/rotation = Quaternion(-1.03792e-08, 6.46154e-09, 0.755864, 0.654728)
+bones/45/rotation = Quaternion(-4.25506e-10, 1.05858e-15, 0.312736, 0.949839)
+bones/46/rotation = Quaternion(1.06302e-09, 4.31135e-09, 0.378685, 0.925524)
+bones/48/rotation = Quaternion(-1.03792e-08, 6.46154e-09, 0.755864, 0.654728)
+bones/49/rotation = Quaternion(-4.25505e-10, 4.43501e-15, 0.312736, 0.949839)
+bones/50/rotation = Quaternion(1.06302e-09, 4.31135e-09, 0.378685, 0.925524)
+bones/52/rotation = Quaternion(-1.03792e-08, 6.46154e-09, 0.755864, 0.654728)
+bones/53/rotation = Quaternion(-4.25506e-10, 1.05858e-15, 0.312736, 0.949839)
+bones/54/rotation = Quaternion(1.71633e-08, -2.27093e-09, 0.378685, 0.925524)
+bones/55/rotation = Quaternion(0.691185, -0.149207, -0.691185, 0.149207)
+bones/56/rotation = Quaternion(3.3515e-08, -1.09177e-10, -0.44447, 0.895794)
+bones/57/rotation = Quaternion(0.546479, 0.448732, 0.546479, 0.448732)
+bones/58/rotation = Quaternion(6.71235e-08, -1.13846e-11, 0.888623, 0.458638)
+bones/60/position = Vector3(0.857291, -6.71631, -3.26232)
+bones/60/rotation = Quaternion(0.393174, 0.587719, -0.393174, -0.587719)
+bones/62/position = Vector3(1.91336, 2.4401, -5.01284)
+bones/63/position = Vector3(1.80031, 3.61311, 4.87229)
+bones/63/rotation = Quaternion(0.0636978, 0.728069, 0.67994, -0.0594869)
+bones/65/position = Vector3(-0.857291, -3.52152, -1.23778)
+bones/65/rotation = Quaternion(0.0846548, -0.702021, 0.0846547, -0.702021)
+bones/67/position = Vector3(-1.96533, 2.38991, -5.01284)
+bones/68/position = Vector3(-2.49378, 0.81647, -2.33184)
+bones/68/rotation = Quaternion(-0.000261991, -0.254334, 0.967115, -0.00153385)
+
+[node name="AnimationPlayer" parent="." index="1"]
+reset_on_save = false
+method_call_mode = 1

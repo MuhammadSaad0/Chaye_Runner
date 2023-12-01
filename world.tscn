@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2p7ps80hftrg"]
+
+[ext_resource type="PackedScene" uid="uid://dtot5hew3j6jy" path="res://terrain_controller.tscn" id="2_34xgp"]
+[ext_resource type="Script" path="res://player.gd" id="2_bw3bx"]
+[ext_resource type="PackedScene" uid="uid://ci4578cemyd7k" path="res://do_i_work.tscn" id="2_fmh20"]
+[ext_resource type="AudioStream" uid="uid://4ixi0bboi40n" path="res://gnork-party-improved-171719.mp3" id="4_yyu0e"]
+[ext_resource type="Texture2D" uid="uid://b1ljvr050toyl" path="res://skyline.png" id="5_wwu3d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m13tq"]
+sky_top_color = Color(0.160784, 0.454902, 0.768627, 1)
+sky_horizon_color = Color(0.92549, 0.909804, 0.65098, 1)
+ground_horizon_color = Color(0.968627, 0.952941, 0.764706, 1)
+
+[sub_resource type="Sky" id="Sky_bwq6u"]
+sky_material = SubResource("ProceduralSkyMaterial_m13tq")
+
+[sub_resource type="Environment" id="Environment_sxudi"]
+background_mode = 2
+background_color = Color(0.792157, 0, 0, 1)
+sky = SubResource("Sky_bwq6u")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4tusc"]
+radius = 7.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sm26c"]
+height = 28.0
+radius = 3.63174
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uxfl2"]
+height = 28.0
+radius = 30.0
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sxudi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(-0.007, 0, -6.11959e-10, 0, 0.007, 0, 6.11959e-10, 0, -0.007, 0, 0.248835, 0)
+script = ExtResource("2_bw3bx")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(3, 0, 4.26326e-14, 0, 3, 0, -4.26326e-14, 0, 3, -7.80233e-07, 324.955, 8.92482)
+shape = SubResource("SphereShape3D_4tusc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(10, 0, 2.27374e-13, 0, 10, 0, -2.27374e-13, 0, 10, -7.31746e-07, 156.48, 8.37019)
+visible = false
+shape = SubResource("CylinderShape3D_sm26c")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(-142.857, 9.99584e-06, -8.64237e-06, 6.05879e-06, 132.583, 53.1961, 1.1743e-05, 53.1961, -132.583, -2.68418, 575.208, -411.283)
+
+[node name="Player" parent="Player" instance=ExtResource("2_fmh20")]
+transform = Transform3D(75, 0, 0, 0, 75, 0, 0, 0, 75, 0, 25, -20)
+
+[node name="Area3D" type="Area3D" parent="Player"]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -7.10543e-15, 0, 1.18007, 0, 215.119, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Area3D"]
+transform = Transform3D(1, 0, -2.84217e-14, 0, 9.54721, 0, 2.84217e-14, 0, 1, -1.01506e-12, -6.10352e-05, -7.51984e-20)
+shape = SubResource("CylinderShape3D_uxfl2")
+
+[node name="TerrainController" parent="." instance=ExtResource("2_34xgp")]
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 112.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Coins" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 40.0
+offset_right = 125.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Rupees: 0"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.085201, 0, 1.61363)
+stream = ExtResource("4_yyu0e")
+volume_db = -3.048
+autoplay = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(347.624, 0, 0, 0, 338.76, 0, 0, 0, 645.357, -32.0933, 318.691, -3572.92)
+texture = ExtResource("5_wwu3d")

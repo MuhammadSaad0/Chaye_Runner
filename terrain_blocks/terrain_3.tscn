@@ -1,0 +1,134 @@
+[gd_scene load_steps=18 format=3 uid="uid://j0hfhy3k2ojt"]
+
+[ext_resource type="PackedScene" uid="uid://dofghpg8w6fyp" path="res://assets/mosque.gltf" id="1_mx0yi"]
+[ext_resource type="Texture2D" uid="uid://d03bj1c1i6efm" path="res://addons/kenney_prototype_textures/light/texture_12.png" id="1_npslj"]
+[ext_resource type="PackedScene" uid="uid://y8m47jrjuigy" path="res://assets/rehri.gltf" id="2_l8t1p"]
+[ext_resource type="PackedScene" uid="uid://1p10hhc1yqtm" path="res://assets/fruit_stall.gltf" id="3_4f13x"]
+[ext_resource type="PackedScene" uid="uid://cnrtrripdq1ek" path="res://addons/kaykit_city_builder_bits/Assets/gltf/bench.gltf" id="3_bsrsx"]
+[ext_resource type="PackedScene" uid="uid://bbjxe33djdkc8" path="res://assets/rehri_nofruit.gltf" id="3_kgcyo"]
+[ext_resource type="PackedScene" uid="uid://dtd3cenbwlk2o" path="res://assets/vlc.gltf" id="6_p4me4"]
+[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/car.gltf" id="7_1ix8f"]
+
+[sub_resource type="Gradient" id="Gradient_qeuvg"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_issoj"]
+seed = 17
+frequency = 0.003
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sxdoy"]
+invert = true
+normalize = false
+color_ramp = SubResource("Gradient_qeuvg")
+noise = SubResource("FastNoiseLite_issoj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igvdh"]
+albedo_color = Color(0.513726, 0.396078, 0.223529, 1)
+albedo_texture = SubResource("NoiseTexture2D_sxdoy")
+roughness_texture = ExtResource("1_npslj")
+roughness_texture_channel = 4
+texture_filter = 5
+grow_amount = 16.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vd85v"]
+material = SubResource("StandardMaterial3D_igvdh")
+size = Vector2(100, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_otswq"]
+data = PackedVector3Array(50, 0, 10, -50, 0, 10, 50, 0, -10, -50, 0, 10, -50, 0, -10, 50, 0, -10)
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_d226f"]
+map_width = 24
+map_depth = 11
+map_data = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fo667"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h7eef"]
+data = PackedVector3Array(50, 0, 10, -50, 0, 10, 50, 0, -10, -50, 0, 10, -50, 0, -10, 50, 0, -10)
+
+[node name="Terrain_0" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0293999, -8.88995)
+mesh = SubResource("PlaneMesh_vd85v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_otswq")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0195987, 0.999167, 0.0357996, -9.37706e-10, 0.0358065, -0.999359, -0.999808, 0.0195863, 0.000701759, -12.5111, 4.22468, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, -1.86265e-09, -5.82077e-11, 0, 1, -1.54887e-09, 5.82077e-11, -1.42427e-09, 1, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_d226f")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0195987, 0.999167, 0.0357996, -9.37706e-10, 0.0358065, -0.999359, -0.999808, 0.0195863, 0.000701759, 8.74035, 4.22468, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, -1.86265e-09, -5.82077e-11, 0, 1, -1.54887e-09, 5.82077e-11, -1.42427e-09, 1, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_d226f")
+
+[node name="Area3D" type="Area3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(19.1533, 0, 0, 0, 1.35665, 0, 0, 0, 5.82034, 10.2641, 1.02757, 3.30713)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_fo667")
+
+[node name="Area3D2" type="Area3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(19.1533, 0, 0, 0, 4.43533, 0, 0, 0, 2.47807, -19.6605, -0.0805862, 1.43996)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+shape = SubResource("BoxShape3D_fo667")
+
+[node name="mosque" parent="." instance=ExtResource("1_mx0yi")]
+transform = Transform3D(0.0361453, 1.76477e-09, 0, -3.15992e-09, 0.0201866, 0, 0, 0, -0.0223793, 28.1843, 0.0397806, -0.547083)
+
+[node name="rehri" parent="." instance=ExtResource("2_l8t1p")]
+transform = Transform3D(-3.0598e-10, 0, 0.0190364, 0, 0.0141889, 0, -0.007, 0, -8.32109e-10, -19.1528, 0, 3.49612)
+
+[node name="rehri_nofruit" parent="." instance=ExtResource("3_kgcyo")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, -14.4572, 0, -5.8973)
+
+[node name="fruit_stall" parent="." instance=ExtResource("3_4f13x")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, -14.374, 0, -0.912572)
+
+[node name="fruit_stall2" parent="." instance=ExtResource("3_4f13x")]
+transform = Transform3D(-0.00175266, 0, -0.00677703, 0, 0.007, 0, 0.00677703, 0, -0.00175266, 2.90457, 0, 4.59175)
+
+[node name="fruit_stall3" parent="." instance=ExtResource("3_4f13x")]
+transform = Transform3D(-0.00175266, 0, 0.00677703, 0, 0.007, 0, -0.00677703, 0, -0.00175266, 6.29061, 0, 0.871845)
+
+[node name="rehri2" parent="." instance=ExtResource("2_l8t1p")]
+transform = Transform3D(-3.0598e-10, 0, 0.016957, 0, 0.0148122, 0, -0.007, 0, -7.41212e-10, -19.2073, 0, 7.90037)
+
+[node name="rehri3" parent="." instance=ExtResource("2_l8t1p")]
+transform = Transform3D(-3.0598e-10, 0, 0.01, 0, 0.01, 0, -0.007, 0, -4.37114e-10, -20.8426, 0, -4.71527)
+
+[node name="bench" parent="." instance=ExtResource("3_bsrsx")]
+transform = Transform3D(-6.20242e-07, 0, -8.02634, 0, 6.50455, 0, 14.1895, 0, -3.50843e-07, 10.2448, 0.0397806, -8.17331)
+
+[node name="vlc" parent="." instance=ExtResource("6_p4me4")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 9.08403, 0, 5.54232)
+
+[node name="vlc2" parent="." instance=ExtResource("6_p4me4")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 7.71493, 0, 5.54232)
+
+[node name="vlc3" parent="." instance=ExtResource("6_p4me4")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 6.29207, 0, 5.54232)
+
+[node name="vlc4" parent="." instance=ExtResource("6_p4me4")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 6.29207, 0, 2.97385)
+
+[node name="car" parent="." instance=ExtResource("7_1ix8f")]
+transform = Transform3D(-3.0598e-10, 0, 0.007, 0, 0.007, 0, -0.007, 0, -3.0598e-10, -11.0087, 0, 0)
+
+[node name="bench2" parent="." instance=ExtResource("3_bsrsx")]
+transform = Transform3D(-6.20242e-07, 0, -8.02634, 0, 6.50455, 0, 14.1895, 0, -3.50843e-07, 10.2448, 0.0397806, 7.21822)
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.029, -8.89)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+transform = Transform3D(7.095, 0, 0, 0, 20, 0, 0, 0, 2.172, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_h7eef")

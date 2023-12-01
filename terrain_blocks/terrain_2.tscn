@@ -1,0 +1,124 @@
+[gd_scene load_steps=19 format=3 uid="uid://npn4ksv4ibq6"]
+
+[ext_resource type="PackedScene" uid="uid://hldsu0cjxpad" path="res://assets/building_ol.gltf" id="2_euke7"]
+[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/car.gltf" id="3_1ywc1"]
+[ext_resource type="PackedScene" uid="uid://b3xbxf2pohxce" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_B.gltf" id="3_5fxpe"]
+[ext_resource type="PackedScene" uid="uid://1p10hhc1yqtm" path="res://assets/fruit_stall.gltf" id="4_svloi"]
+[ext_resource type="PackedScene" uid="uid://qbc3w6fceord" path="res://assets/street_light.gltf" id="5_wpukn"]
+[ext_resource type="PackedScene" uid="uid://ma5m7bmjqs5b" path="res://assets/trash_bag.gltf" id="6_o5ubw"]
+[ext_resource type="PackedScene" uid="uid://bwv78kcq8d3cf" path="res://addons/kaykit_city_builder_bits/Assets/gltf/dumpster.gltf" id="6_v4kx6"]
+[ext_resource type="PackedScene" uid="uid://bgawn8u0ecgw2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/watertower.gltf" id="8_jfryu"]
+[ext_resource type="PackedScene" uid="uid://d4emq6lua3qbl" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_C.gltf" id="10_pxwtt"]
+[ext_resource type="PackedScene" uid="uid://bbjxe33djdkc8" path="res://assets/rehri_nofruit.gltf" id="11_5ia0c"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_urid4"]
+seed = 6
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_83h7n"]
+noise = SubResource("FastNoiseLite_urid4")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_65hmc"]
+albedo_texture = SubResource("NoiseTexture2D_83h7n")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vd85v"]
+material = SubResource("ORMMaterial3D_65hmc")
+size = Vector2(100, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_riiig"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_otswq"]
+data = PackedVector3Array(50, 0, 10, -50, 0, 10, 50, 0, -10, -50, 0, 10, -50, 0, -10, 50, 0, -10)
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_d226f"]
+map_width = 24
+map_depth = 11
+map_data = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uy2cy"]
+size = Vector3(1, 1, 0.001)
+
+[node name="Terrain_0" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0293999, -8.88995)
+mesh = SubResource("PlaneMesh_vd85v")
+
+[node name="Block_0" type="StaticBody3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639, 4.0035)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_0"]
+transform = Transform3D(2.79586, 0, 0, 0, 1, 0, 0, 0, 2.0393, 0, 0, 0)
+shape = SubResource("BoxShape3D_riiig")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_otswq")
+
+[node name="building_ol" parent="." instance=ExtResource("2_euke7")]
+transform = Transform3D(-8.74228e-10, 0, 0.0338482, 0, 0.0492738, 0, -0.02, 0, -1.47955e-09, -26.7621, 0.100645, 2.02513)
+
+[node name="car" parent="." instance=ExtResource("3_1ywc1")]
+transform = Transform3D(-0.00572544, 0, 0.00179424, 0, 0.006, 0, -0.00179424, 0, -0.00572544, -14.2458, 1.43051e-06, -4.24334)
+
+[node name="fruit_stall" parent="." instance=ExtResource("4_svloi")]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, -11.2297, 0.0241513, -7.28346)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0195987, 0.999167, 0.0357996, -9.37706e-10, 0.0358065, -0.999359, -0.999808, 0.0195863, 0.000701759, -12.5111, 4.22468, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, -1.86265e-09, -5.82077e-11, 0, 1, -1.54887e-09, 5.82077e-11, -1.42427e-09, 1, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_d226f")
+
+[node name="street_light" parent="." instance=ExtResource("5_wpukn")]
+transform = Transform3D(-0.01, 0, -8.74228e-10, 0, 0.01, 0, 8.74228e-10, 0, -0.01, 9.59865, -0.12773, -3.28811)
+
+[node name="dumpster" parent="." instance=ExtResource("6_v4kx6")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 8.37167, 0.113048, 1.13787)
+
+[node name="trash_bag" parent="." instance=ExtResource("6_o5ubw")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 8.30217, 0.0343382, -1.45152)
+
+[node name="watertower" parent="." instance=ExtResource("8_jfryu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.79109, 0.0452084, -4.2929)
+
+[node name="trash_bag3" parent="." instance=ExtResource("6_o5ubw")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 7.30217, 0.0343382, 2.34527)
+
+[node name="trash_bag4" parent="." instance=ExtResource("6_o5ubw")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 7.30217, 0.0343382, 0.926797)
+
+[node name="building_B" parent="." instance=ExtResource("3_5fxpe")]
+transform = Transform3D(5.24537e-07, 0, -13.95, 0, 13.2261, 0, 4, 0, 1.82932e-06, 26.6194, -0.239591, 5.90889)
+
+[node name="trash_bag2" parent="." instance=ExtResource("6_o5ubw")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 8.50859, 0.0343382, -0.587797)
+
+[node name="Area3D" type="Area3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 9.44348, 0.0343382, 8.43796)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1192.89, 0, 0, 0, 115.211, 0, 0, 0, 104344, -136.897, 59.4746, -859.851)
+shape = SubResource("BoxShape3D_uy2cy")
+
+[node name="trash_bag5" parent="." instance=ExtResource("6_o5ubw")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 9.94654, 0.087568, -0.653173)
+
+[node name="trash_bag6" parent="." instance=ExtResource("6_o5ubw")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 6.62043, 0.0343382, 3.97689)
+
+[node name="trash_bag7" parent="." instance=ExtResource("6_o5ubw")]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 6.29337, 0.0343382, 2.40041)
+
+[node name="building_C" parent="." instance=ExtResource("10_pxwtt")]
+transform = Transform3D(9.12, 0, 0, 0, 8.4, 0, 0, 0, 4, 19.8519, 0.71659, -4.42246)
+
+[node name="rehri_nofruit" parent="." instance=ExtResource("11_5ia0c")]
+transform = Transform3D(-2.18557e-10, 0, -0.005, 0, 0.005, 0, 0.005, 0, -2.18557e-10, -0.142896, -0.0307336, 3.9974)
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0195987, 0.999167, 0.0357996, -9.37706e-10, 0.0358065, -0.999359, -0.999808, 0.0195863, 0.000701759, 8.74035, 4.22468, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, -1.86265e-09, -5.82077e-11, 0, 1, -1.54887e-09, 5.82077e-11, -1.42427e-09, 1, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_d226f")
