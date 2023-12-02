@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dtot5hew3j6jy" path="res://terrain_controller.tscn" id="2_34xgp"]
 [ext_resource type="Script" path="res://player.gd" id="2_bw3bx"]
-[ext_resource type="PackedScene" uid="uid://ci4578cemyd7k" path="res://do_i_work.tscn" id="2_fmh20"]
-[ext_resource type="AudioStream" uid="uid://4ixi0bboi40n" path="res://gnork-party-improved-171719.mp3" id="4_yyu0e"]
-[ext_resource type="Texture2D" uid="uid://b1ljvr050toyl" path="res://skyline.png" id="5_wwu3d"]
+[ext_resource type="PackedScene" uid="uid://c6g45u6netmrb" path="res://do_i_work.tscn" id="2_fmh20"]
+[ext_resource type="AudioStream" uid="uid://4ixi0bboi40n" path="res://assets/audio/gnork-party-improved-171719.mp3" id="4_yyu0e"]
+[ext_resource type="Texture2D" uid="uid://b1ljvr050toyl" path="res://assets/images/skyline.png" id="5_wwu3d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m13tq"]
 sky_top_color = Color(0.160784, 0.454902, 0.768627, 1)

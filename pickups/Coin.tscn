@@ -1,12 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://draxkvghgg26g"]
+[gd_scene load_steps=3 format=3 uid="uid://draxkvghgg26g"]
 
-[ext_resource type="Script" path="res://Coin.gd" id="1_srbbx"]
-[ext_resource type="Texture2D" uid="uid://bqpk30b5o6lqb" path="res://coin.png" id="2_oq6hr"]
+[ext_resource type="Texture2D" uid="uid://bqpk30b5o6lqb" path="res://assets/images/coin.png" id="2_oq6hr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yklmm"]
 
 [node name="Coin" type="Node3D"]
-script = ExtResource("1_srbbx")
 
 [node name="Area3D" type="Area3D" parent="." groups=["Coins"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.294535, 0, 1.09664, -4.031)

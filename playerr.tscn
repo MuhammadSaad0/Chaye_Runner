@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://5g3lf1do3e6p"]
+[gd_scene load_steps=2 format=3 uid="uid://dr8cf3ug8dv1l"]
 
-[ext_resource type="PackedScene" uid="uid://cduk48vf7nvpe" path="res://assets/playerr.glb" id="1_8cog1"]
+[ext_resource type="PackedScene" uid="uid://cduk48vf7nvpe" path="res://assets/gltfs/playerr.glb" id="1_8cog1"]
 
 [node name="playerr" instance=ExtResource("1_8cog1")]
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://rat2a38igukv"]
+[gd_scene load_steps=2 format=3 uid="uid://c3ndwcit7bd57"]
 
-[ext_resource type="PackedScene" uid="uid://bwm588gj2kuul" path="res://assets/player_final.glb" id="1_lxdyh"]
+[ext_resource type="PackedScene" uid="uid://bwm588gj2kuul" path="res://assets/gltfs/player_final.glb" id="1_lxdyh"]
 
 [node name="player_final" instance=ExtResource("1_lxdyh")]
 

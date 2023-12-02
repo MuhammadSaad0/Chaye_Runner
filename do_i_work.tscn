@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci4578cemyd7k"]
+[gd_scene load_steps=2 format=3 uid="uid://c6g45u6netmrb"]
 
-[ext_resource type="PackedScene" uid="uid://d2gsksnhs1sgf" path="res://assets/do_i_work.glb" id="1_kx7rl"]
+[ext_resource type="PackedScene" uid="uid://d2gsksnhs1sgf" path="res://assets/gltfs/do_i_work.glb" id="1_kx7rl"]
 
 [node name="do_i_work" instance=ExtResource("1_kx7rl")]
 

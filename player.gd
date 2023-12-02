@@ -40,7 +40,7 @@ func on_collision(body):
 		coin_label.text = "Rupees: " + str(coins)
 	elif body.is_in_group("JumpBoost"):
 		print("JumpBoost")
-		jumpBoostTimer = 120
+		jumpBoostTimer = 180
 		JUMP_VELOCITY *= 2
 	elif body.is_in_group("SpeedBoost"):
 		print("SpeedBoost")

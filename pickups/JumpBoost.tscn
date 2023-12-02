@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmabygu82pqf1"]
 
-[ext_resource type="Texture2D" uid="uid://b27wtw8yqkj4o" path="res://jumptea.png" id="1_605bb"]
+[ext_resource type="Texture2D" uid="uid://b27wtw8yqkj4o" path="res://assets/images/jumptea.png" id="1_605bb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_milwi"]
 

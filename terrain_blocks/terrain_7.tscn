@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://mai6yafcdoxw" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_A.gltf" id="2_jvxlo"]
 [ext_resource type="PackedScene" uid="uid://bxaio1aur3xgq" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_sedan.gltf" id="3_wcdvq"]
 [ext_resource type="PackedScene" uid="uid://c1b8ypuawiu8s" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_hatchback.gltf" id="4_xq5xg"]
-[ext_resource type="Texture2D" uid="uid://chgp14ed6ivr2" path="res://seamless-cracked-texture-for-photoshop.jpg" id="7_et7hq"]
-[ext_resource type="PackedScene" uid="uid://dtd3cenbwlk2o" path="res://assets/vlc.gltf" id="7_ixebm"]
+[ext_resource type="PackedScene" uid="uid://dtd3cenbwlk2o" path="res://assets/gltfs/vlc.gltf" id="7_ixebm"]
+[ext_resource type="Texture2D" uid="uid://chgp14ed6ivr2" path="res://assets/images/seamless-cracked-texture-for-photoshop.jpg" id="7_l3u8j"]
 [ext_resource type="PackedScene" uid="uid://bgawn8u0ecgw2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/watertower.gltf" id="8_cnlhr"]
-[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/car.gltf" id="8_vcd1v"]
-[ext_resource type="PackedScene" uid="uid://ma5m7bmjqs5b" path="res://assets/trash_bag.gltf" id="9_86k5w"]
+[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/gltfs/car.gltf" id="8_vcd1v"]
+[ext_resource type="PackedScene" uid="uid://ma5m7bmjqs5b" path="res://assets/gltfs/trash_bag.gltf" id="9_86k5w"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vd85v"]
 size = Vector2(100, 20)
@@ -85,35 +85,35 @@ transform = Transform3D(0.574442, 0, 0, 0, -1.07905e-08, 0.662416, 0, -0.246858,
 flip_h = true
 flip_v = true
 modulate = Color(0.627451, 0.627451, 0.627451, 1)
-texture = ExtResource("7_et7hq")
+texture = ExtResource("7_l3u8j")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.574442, 0, 0, 0, -1.07905e-08, 0.662416, 0, -0.246858, -2.89551e-08, -1.565, 0.0886431, -1.38983)
 flip_h = true
 flip_v = true
 modulate = Color(0.627451, 0.627451, 0.627451, 1)
-texture = ExtResource("7_et7hq")
+texture = ExtResource("7_l3u8j")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
 transform = Transform3D(1.11706, 0, 0, 0, -3.87828e-08, 0.662416, 0, -0.887247, -2.89551e-08, -30.3673, 0.0886431, 0.186384)
 flip_h = true
 flip_v = true
 modulate = Color(0.627451, 0.627451, 0.627451, 1)
-texture = ExtResource("7_et7hq")
+texture = ExtResource("7_l3u8j")
 
 [node name="Sprite3D5" type="Sprite3D" parent="."]
 transform = Transform3D(1.22717, 0, 0, 0, -3.87828e-08, 0.662416, 0, -0.887247, -2.89551e-08, 29.4665, 0.0886431, 0.186384)
 flip_h = true
 flip_v = true
 modulate = Color(0.627451, 0.627451, 0.627451, 1)
-texture = ExtResource("7_et7hq")
+texture = ExtResource("7_l3u8j")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(0.574442, 0, 0, 0, -1.67788e-08, 0.662416, 0, -0.383854, -2.89551e-08, -1.565, 0.0886431, 5.86403)
 flip_h = true
 flip_v = true
 modulate = Color(0.627451, 0.627451, 0.627451, 1)
-texture = ExtResource("7_et7hq")
+texture = ExtResource("7_l3u8j")
 
 [node name="watertower" parent="." instance=ExtResource("8_cnlhr")]
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, -37.7453, -0.0293989, -2.96279)

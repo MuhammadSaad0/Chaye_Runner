@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsvw4mvjyyv7h"]
 
-[ext_resource type="Texture2D" uid="uid://dou5a65dqx0xr" path="res://paan.png" id="1_v8fm7"]
+[ext_resource type="Texture2D" uid="uid://dou5a65dqx0xr" path="res://assets/images/paan.png" id="1_v8fm7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_milwi"]
 

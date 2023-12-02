@@ -1,15 +1,15 @@
 [gd_scene load_steps=19 format=3 uid="uid://npn4ksv4ibq6"]
 
-[ext_resource type="PackedScene" uid="uid://hldsu0cjxpad" path="res://assets/building_ol.gltf" id="2_euke7"]
-[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/car.gltf" id="3_1ywc1"]
+[ext_resource type="PackedScene" uid="uid://hldsu0cjxpad" path="res://assets/gltfs/building_ol.gltf" id="2_euke7"]
+[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/gltfs/car.gltf" id="3_1ywc1"]
 [ext_resource type="PackedScene" uid="uid://b3xbxf2pohxce" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_B.gltf" id="3_5fxpe"]
-[ext_resource type="PackedScene" uid="uid://1p10hhc1yqtm" path="res://assets/fruit_stall.gltf" id="4_svloi"]
-[ext_resource type="PackedScene" uid="uid://qbc3w6fceord" path="res://assets/street_light.gltf" id="5_wpukn"]
-[ext_resource type="PackedScene" uid="uid://ma5m7bmjqs5b" path="res://assets/trash_bag.gltf" id="6_o5ubw"]
+[ext_resource type="PackedScene" uid="uid://1p10hhc1yqtm" path="res://assets/gltfs/fruit_stall.gltf" id="4_svloi"]
+[ext_resource type="PackedScene" uid="uid://qbc3w6fceord" path="res://assets/gltfs/street_light.gltf" id="5_wpukn"]
+[ext_resource type="PackedScene" uid="uid://ma5m7bmjqs5b" path="res://assets/gltfs/trash_bag.gltf" id="6_o5ubw"]
 [ext_resource type="PackedScene" uid="uid://bwv78kcq8d3cf" path="res://addons/kaykit_city_builder_bits/Assets/gltf/dumpster.gltf" id="6_v4kx6"]
 [ext_resource type="PackedScene" uid="uid://bgawn8u0ecgw2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/watertower.gltf" id="8_jfryu"]
 [ext_resource type="PackedScene" uid="uid://d4emq6lua3qbl" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_C.gltf" id="10_pxwtt"]
-[ext_resource type="PackedScene" uid="uid://bbjxe33djdkc8" path="res://assets/rehri_nofruit.gltf" id="11_5ia0c"]
+[ext_resource type="PackedScene" uid="uid://bbjxe33djdkc8" path="res://assets/gltfs/rehri_nofruit.gltf" id="11_5ia0c"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_urid4"]
 seed = 6

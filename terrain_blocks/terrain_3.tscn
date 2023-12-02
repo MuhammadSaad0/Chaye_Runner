@@ -1,13 +1,13 @@
 [gd_scene load_steps=18 format=3 uid="uid://j0hfhy3k2ojt"]
 
-[ext_resource type="PackedScene" uid="uid://dofghpg8w6fyp" path="res://assets/mosque.gltf" id="1_mx0yi"]
+[ext_resource type="PackedScene" uid="uid://dofghpg8w6fyp" path="res://assets/gltfs/mosque.gltf" id="1_mx0yi"]
 [ext_resource type="Texture2D" uid="uid://d03bj1c1i6efm" path="res://addons/kenney_prototype_textures/light/texture_12.png" id="1_npslj"]
-[ext_resource type="PackedScene" uid="uid://y8m47jrjuigy" path="res://assets/rehri.gltf" id="2_l8t1p"]
-[ext_resource type="PackedScene" uid="uid://1p10hhc1yqtm" path="res://assets/fruit_stall.gltf" id="3_4f13x"]
+[ext_resource type="PackedScene" uid="uid://y8m47jrjuigy" path="res://assets/gltfs/rehri.gltf" id="2_l8t1p"]
+[ext_resource type="PackedScene" uid="uid://1p10hhc1yqtm" path="res://assets/gltfs/fruit_stall.gltf" id="3_4f13x"]
 [ext_resource type="PackedScene" uid="uid://cnrtrripdq1ek" path="res://addons/kaykit_city_builder_bits/Assets/gltf/bench.gltf" id="3_bsrsx"]
-[ext_resource type="PackedScene" uid="uid://bbjxe33djdkc8" path="res://assets/rehri_nofruit.gltf" id="3_kgcyo"]
-[ext_resource type="PackedScene" uid="uid://dtd3cenbwlk2o" path="res://assets/vlc.gltf" id="6_p4me4"]
-[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/car.gltf" id="7_1ix8f"]
+[ext_resource type="PackedScene" uid="uid://bbjxe33djdkc8" path="res://assets/gltfs/rehri_nofruit.gltf" id="3_kgcyo"]
+[ext_resource type="PackedScene" uid="uid://dtd3cenbwlk2o" path="res://assets/gltfs/vlc.gltf" id="6_p4me4"]
+[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/gltfs/car.gltf" id="7_1ix8f"]
 
 [sub_resource type="Gradient" id="Gradient_qeuvg"]
 

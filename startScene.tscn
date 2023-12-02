@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://bl174bt2je4v3"]
 
 [ext_resource type="Script" path="res://StartingAnimation.gd" id="1_3h8xn"]
-[ext_resource type="AudioStream" uid="uid://gx007y41sner" path="res://bruh.mp3" id="1_s3nh8"]
+[ext_resource type="AudioStream" uid="uid://gx007y41sner" path="res://assets/audio/bruh.mp3" id="1_g3ttq"]
 [ext_resource type="PackedScene" uid="uid://ek3fwkkeexnm" path="res://terrain_blocks/terrain_1.tscn" id="3_88tr5"]
-[ext_resource type="PackedScene" uid="uid://co227w1g4ulck" path="res://assets/Male_LongSleeve.gltf" id="4_loh4k"]
+[ext_resource type="PackedScene" uid="uid://co227w1g4ulck" path="res://assets/gltfs/Male_LongSleeve.gltf" id="4_loh4k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rrhmx"]
 albedo_color = Color(0.282353, 0.211765, 0, 0.580392)
@@ -177,7 +177,7 @@ tracks/6/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("1_s3nh8")
+"stream": ExtResource("1_g3ttq")
 }],
 "times": PackedFloat32Array(3)
 }

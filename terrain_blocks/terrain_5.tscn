@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://de16h736p6mqd" path="res://addons/kenney_prototype_textures/light/texture_07.png" id="1_gcfog"]
 [ext_resource type="PackedScene" uid="uid://bielrqkr6u0eu" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_D.gltf" id="1_ucexs"]
-[ext_resource type="Texture2D" uid="uid://c7ife30sbihyn" path="res://stop_text.png" id="1_xu8ua"]
-[ext_resource type="PackedScene" uid="uid://hldsu0cjxpad" path="res://assets/building_ol.gltf" id="2_cmudy"]
-[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/car.gltf" id="3_o3ifn"]
+[ext_resource type="PackedScene" uid="uid://hldsu0cjxpad" path="res://assets/gltfs/building_ol.gltf" id="2_cmudy"]
+[ext_resource type="Texture2D" uid="uid://c7ife30sbihyn" path="res://assets/images/stop_text.png" id="2_g31gs"]
+[ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/gltfs/car.gltf" id="3_o3ifn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8ayx"]
 albedo_color = Color(0.839216, 0.839216, 0.839216, 1)
@@ -41,7 +41,7 @@ mesh = SubResource("BoxMesh_l1p25")
 
 [node name="Sprite3D" type="Sprite3D" parent="Block_2"]
 transform = Transform3D(0.130795, 0, 0, 0, 0.195841, 0, 0, 0, 1, 0, 0.00662673, 0.517136)
-texture = ExtResource("1_xu8ua")
+texture = ExtResource("2_g31gs")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
