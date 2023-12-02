@@ -9,16 +9,20 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 224.0
+offset_top = 290.0
+offset_right = 224.0
+offset_bottom = 290.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0yun8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -50.0
-offset_top = -7.0
-offset_right = 1870.0
-offset_bottom = 1073.0
+offset_left = -220.0
+offset_top = -287.0
+offset_right = 1700.0
+offset_bottom = 793.0
 scale = Vector2(1.04127, 1.09157)
 texture = ExtResource("2_0txjv")
 
@@ -43,4 +47,30 @@ theme_override_fonts/font = ExtResource("3_hplf8")
 theme_override_font_sizes/font_size = 16
 text = "Start"
 
+[node name="CheckBox" type="CheckBox" parent="TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+text = "FullScreen"
+
+[node name="CheckButton" type="CheckButton" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+button_pressed = true
+text = "Audio"
+
+[node name="CheckButton2" type="CheckButton" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "DeepFried"
+
 [connection signal="pressed" from="TextureRect/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="ready" from="TextureRect/VBoxContainer/CheckBox" to="." method="_on_check_box_ready"]
+[connection signal="toggled" from="TextureRect/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="ready" from="TextureRect/VBoxContainer/CheckButton" to="." method="_on_check_button_ready"]
+[connection signal="toggled" from="TextureRect/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="ready" from="TextureRect/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_ready"]
+[connection signal="toggled" from="TextureRect/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_toggled"]
