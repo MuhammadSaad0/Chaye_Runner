@@ -27,15 +27,15 @@ can be cloned and run using Godot.
 
 #### Project Structure
 ```
-| Root <br>
+| Root 
   |-- addons (external libraries or packages from the godot package manager go here) 
   |-- assets 
   |    |-- audio 
   |    |-- gltfs (models and stuff)
-  |    |-- images <br>
+  |    |-- images 
   |-- fonts 
-  |-- pickups (contains all the scenes for in-game pickups) <br>
-  |-- scenes (general scenes for different set pieces) <br>
-  |-- scripts (all gd/c# scripts go here) <br>
-  |-- terrain_blocks (randomly spawned prefabricated terrain) <br>
+  |-- pickups (contains all the scenes for in-game pickups) 
+  |-- scenes (general scenes for different set pieces) 
+  |-- scripts (all gd/c# scripts go here) 
+  |-- terrain_blocks (randomly spawned prefabricated terrain) 
 ```
