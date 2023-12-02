@@ -11,7 +11,7 @@ func _process(delta):
 
 
 func _on_start_button_pressed():
-	get_tree().change_scene_to_file("res://startScene.tscn")
+	get_tree().change_scene_to_file("res://scenes/startScene.tscn")
 
 
 func _on_check_box_toggled(button_pressed):

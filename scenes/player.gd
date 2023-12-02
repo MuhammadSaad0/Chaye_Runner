@@ -54,11 +54,11 @@ func on_collision(body):
 		get_node("/root/World/AudioStreamPlayer3D").pitch_scale = 3
 		
 	elif body.is_in_group("Obstacle"):
-		get_tree().change_scene_to_file('res://Menu.tscn')
+		get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 		
 func on_collision2(body):
 	if body.is_in_group("Obstacle"):
-		get_tree().change_scene_to_file('res://Menu.tscn')
+		get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 
 func _physics_process(delta):
 

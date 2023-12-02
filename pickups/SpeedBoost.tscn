@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://3jpg78m55g76"]
 
-[ext_resource type="Script" path="res://Pickups.gd" id="1_b0oll"]
 [ext_resource type="Texture2D" uid="uid://ka2r6t8eylq" path="res://assets/images/speedtea.png" id="1_io47d"]
+[ext_resource type="Script" path="res://scripts/Pickups.gd" id="1_v2uf4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wojqm"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
-script = ExtResource("1_b0oll")
+script = ExtResource("1_v2uf4")
 
 [node name="Area3D" type="Area3D" parent="." groups=["SpeedBoost"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.294535, 0, 0, 0)

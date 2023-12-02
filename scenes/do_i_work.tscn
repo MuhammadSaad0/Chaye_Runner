@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6g45u6netmrb"]
 
-[ext_resource type="PackedScene" uid="uid://d2gsksnhs1sgf" path="res://assets/gltfs/do_i_work.glb" id="1_kx7rl"]
+[ext_resource type="PackedScene" uid="uid://d2gsksnhs1sgf" path="res://assets/gltfs/do_i_work.glb" id="1_5gkj1"]
 
-[node name="do_i_work" instance=ExtResource("1_kx7rl")]
+[node name="do_i_work" instance=ExtResource("1_5gkj1")]
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/position = Vector3(1.61293, -0.291621, -194.132)

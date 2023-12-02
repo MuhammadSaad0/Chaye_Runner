@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://bl174bt2je4v3"]
 
-[ext_resource type="Script" path="res://StartingAnimation.gd" id="1_3h8xn"]
-[ext_resource type="AudioStream" uid="uid://gx007y41sner" path="res://assets/audio/bruh.mp3" id="1_g3ttq"]
-[ext_resource type="PackedScene" uid="uid://ek3fwkkeexnm" path="res://terrain_blocks/terrain_1.tscn" id="3_88tr5"]
-[ext_resource type="PackedScene" uid="uid://co227w1g4ulck" path="res://assets/gltfs/Male_LongSleeve.gltf" id="4_loh4k"]
+[ext_resource type="AudioStream" uid="uid://gx007y41sner" path="res://assets/audio/bruh.mp3" id="1_vqvxf"]
+[ext_resource type="Script" path="res://scripts/StartingAnimation.gd" id="2_7lcgp"]
+[ext_resource type="PackedScene" uid="uid://ek3fwkkeexnm" path="res://terrain_blocks/terrain_1.tscn" id="3_5i33n"]
+[ext_resource type="PackedScene" uid="uid://co227w1g4ulck" path="res://assets/gltfs/Male_LongSleeve.gltf" id="4_dl8un"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rrhmx"]
 albedo_color = Color(0.282353, 0.211765, 0, 0.580392)
@@ -177,7 +177,7 @@ tracks/6/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("1_g3ttq")
+"stream": ExtResource("1_vqvxf")
 }],
 "times": PackedFloat32Array(3)
 }
@@ -239,7 +239,7 @@ autoplay = "scene"
 libraries = {
 "": SubResource("AnimationLibrary_b5c2x")
 }
-script = ExtResource("1_3h8xn")
+script = ExtResource("2_7lcgp")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fgoc3")
@@ -256,10 +256,10 @@ text = "Deliver this ASAP or you're fired buddy!"
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0.0928812, 0.771, 0.410688)
 
-[node name="Terrain_0" parent="." instance=ExtResource("3_88tr5")]
+[node name="Terrain_0" parent="." instance=ExtResource("3_5i33n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.56661, 0, 0.0293999, -46.9739)
 
-[node name="Owner" parent="." instance=ExtResource("4_loh4k")]
+[node name="Owner" parent="." instance=ExtResource("4_dl8un")]
 transform = Transform3D(0.00139231, 0, -0.00763465, 0, 0.0036963, 0, 0.00362236, 0, 0.00293449, 3.16145, 0.201143, 0.397743)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

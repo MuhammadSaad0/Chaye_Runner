@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://b2p7ps80hftrg"]
 
-[ext_resource type="PackedScene" uid="uid://dtot5hew3j6jy" path="res://terrain_controller.tscn" id="2_34xgp"]
-[ext_resource type="Script" path="res://player.gd" id="2_bw3bx"]
-[ext_resource type="PackedScene" uid="uid://c6g45u6netmrb" path="res://do_i_work.tscn" id="2_fmh20"]
+[ext_resource type="PackedScene" uid="uid://dtot5hew3j6jy" path="res://scenes/terrain_controller.tscn" id="2_34xgp"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="2_bw3bx"]
+[ext_resource type="PackedScene" uid="uid://c6g45u6netmrb" path="res://scenes/do_i_work.tscn" id="2_fmh20"]
 [ext_resource type="AudioStream" uid="uid://4ixi0bboi40n" path="res://assets/audio/gnork-party-improved-171719.mp3" id="4_yyu0e"]
 [ext_resource type="Texture2D" uid="uid://b1ljvr050toyl" path="res://assets/images/skyline.png" id="5_wwu3d"]
 

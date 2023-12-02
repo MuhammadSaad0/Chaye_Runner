@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_animation_finished(anim_name):
-	get_tree().change_scene_to_file("res://world.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/world.tscn") # Replace with function body.

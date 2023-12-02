@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmabygu82pqf1"]
 
 [ext_resource type="Texture2D" uid="uid://b27wtw8yqkj4o" path="res://assets/images/jumptea.png" id="1_605bb"]
-[ext_resource type="Script" path="res://Pickups.gd" id="1_l7hmy"]
+[ext_resource type="Script" path="res://scripts/Pickups.gd" id="1_tovl6"]
 [ext_resource type="AudioStream" uid="uid://1kqndbeam1j6" path="res://assets/audio/tea_pickup.mp3" id="3_x8j0k"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_milwi"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
-script = ExtResource("1_l7hmy")
+script = ExtResource("1_tovl6")
 
 [node name="Area3D" type="Area3D" parent="." groups=["JumpBoost"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.294535, 0, 0, 0)
