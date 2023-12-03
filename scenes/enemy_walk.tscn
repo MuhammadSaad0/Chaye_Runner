@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://crdkagn688bb8"]
+
+[ext_resource type="PackedScene" uid="uid://clywytqe4bbsp" path="res://assets/gltfs/enemy_walk.glb" id="1_ota6r"]
+
+[node name="enemy_walk" instance=ExtResource("1_ota6r")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0.621714, -2.5868, -156.918)
+bones/0/rotation = Quaternion(-0.700828, 0.0111642, -0.0204338, 0.71295)
+bones/1/rotation = Quaternion(0.00883183, 0.00423172, -0.00437439, 0.999942)
+bones/2/rotation = Quaternion(0.00338559, 0.00608799, 0.00427216, 0.999967)
+bones/3/rotation = Quaternion(0.00338557, 0.00608799, 0.00427216, 0.999967)
+bones/4/rotation = Quaternion(-0.00697043, -0.00405296, -0.0105142, 0.999912)
+bones/5/rotation = Quaternion(0.0235009, -0.0268053, 0.0160074, 0.999236)
+bones/7/rotation = Quaternion(0.691066, 0.304417, -0.525946, 0.391328)
+bones/8/position = Vector3(3.98664e-06, 24.9203, -1.08232e-05)
+bones/8/rotation = Quaternion(0.316838, -0.103582, -0.0237877, 0.942507)
+bones/9/position = Vector3(2.4126e-06, 56.2466, 2.44381e-06)
+bones/9/rotation = Quaternion(0.0976661, 0.163178, 0.260426, 0.946579)
+bones/10/position = Vector3(1.09673e-05, 38.0066, -4.35114e-06)
+bones/11/rotation = Quaternion(0.662776, -0.327264, 0.568956, 0.360438)
+bones/12/position = Vector3(-3.6731e-06, 24.9202, -5.57001e-06)
+bones/12/rotation = Quaternion(0.342554, 0.123258, 0.148039, 0.919537)
+bones/13/position = Vector3(-1.10984e-06, 56.2631, 3.26224e-06)
+bones/13/rotation = Quaternion(0.124224, -0.118799, -0.196883, 0.965242)
+bones/15/rotation = Quaternion(0.0577844, 0.206397, 0.97676, 0.00137313)
+bones/16/rotation = Quaternion(-0.568881, 0.00561604, 0.0689255, 0.819507)
+bones/17/rotation = Quaternion(0.593737, 0.0232302, 0.0123423, 0.804229)
+bones/18/position = Vector3(-6.94216e-06, 28.3719, 2.0938e-07)
+bones/18/rotation = Quaternion(0.237107, -0.212564, 0.0332066, 0.947362)
+bones/20/rotation = Quaternion(0.0704759, -0.0851644, -0.991777, 0.0644832)
+bones/21/rotation = Quaternion(-0.14935, -0.0660873, -0.0670567, 0.984292)
+bones/22/rotation = Quaternion(0.583279, -0.0555057, -0.0544031, 0.808545)
+bones/23/rotation = Quaternion(0.257379, 0.235856, -0.0526227, 0.935606)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "walk"
