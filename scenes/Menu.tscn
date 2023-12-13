@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_q1ovy"]
 [ext_resource type="Texture2D" uid="uid://mx6xpujbrs22" path="res://assets/images/Chaye_Runner.png" id="2_kn06r"]
-[ext_resource type="FontFile" uid="uid://dmuxngsjq25tt" path="res://Fonts/Roboto-Black.ttf" id="3_i5keq"]
+[ext_resource type="FontFile" uid="uid://dmuxngsjq25tt" path="res://fonts/Roboto-Black.ttf" id="3_i5keq"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

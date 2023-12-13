@@ -104,9 +104,6 @@ shape = SubResource("BoxShape3D_uy2cy")
 [node name="trash_bag5" parent="." instance=ExtResource("6_o5ubw")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 9.94654, 0.087568, -0.653173)
 
-[node name="trash_bag6" parent="." instance=ExtResource("6_o5ubw")]
-transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 6.62043, 0.0343382, 3.97689)
-
 [node name="trash_bag7" parent="." instance=ExtResource("6_o5ubw")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 6.29337, 0.0343382, 2.40041)
 

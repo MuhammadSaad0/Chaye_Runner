@@ -79,6 +79,7 @@ shape = SubResource("BoxShape3D_fo667")
 transform = Transform3D(19.1533, 0, 0, 0, 4.43533, 0, 0, 0, 2.47807, -19.6605, -0.0805862, 1.43996)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0218323, 0, 0)
 shape = SubResource("BoxShape3D_fo667")
 
 [node name="mosque" parent="." instance=ExtResource("1_mx0yi")]

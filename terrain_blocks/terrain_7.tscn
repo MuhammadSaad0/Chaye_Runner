@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0nm1wnku8y4n"]
+[gd_scene load_steps=12 format=3 uid="uid://b0nm1wnku8y4n"]
 
 [ext_resource type="PackedScene" uid="uid://mai6yafcdoxw" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_A.gltf" id="2_jvxlo"]
 [ext_resource type="PackedScene" uid="uid://bxaio1aur3xgq" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_sedan.gltf" id="3_wcdvq"]
 [ext_resource type="PackedScene" uid="uid://c1b8ypuawiu8s" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_hatchback.gltf" id="4_xq5xg"]
-[ext_resource type="PackedScene" uid="uid://dtd3cenbwlk2o" path="res://assets/gltfs/vlc.gltf" id="7_ixebm"]
 [ext_resource type="Texture2D" uid="uid://chgp14ed6ivr2" path="res://assets/images/seamless-cracked-texture-for-photoshop.jpg" id="7_l3u8j"]
 [ext_resource type="PackedScene" uid="uid://bgawn8u0ecgw2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/watertower.gltf" id="8_cnlhr"]
 [ext_resource type="PackedScene" uid="uid://s4vsivfhaexi" path="res://assets/gltfs/car.gltf" id="8_vcd1v"]
@@ -60,6 +59,12 @@ transform = Transform3D(2.15453, 0, 0, 0, 3.02608, 0, 0, 0, 4.09199, -4.1665, 0.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_564wm")
 
+[node name="Area3D3" type="Area3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(1.32512, 0, 0, 0, 7.05083, 0, 0, 0, 0.964782, -0.0584803, 3.82679, -0.308489)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+shape = SubResource("BoxShape3D_564wm")
+
 [node name="Area3D2" type="Area3D" parent="." groups=["Obstacle"]]
 transform = Transform3D(-4.37114e-08, 0, -4.09199, 0, 3.02608, 0, 1, 0, -1.78867e-07, -8.20526, 0.872784, 0.0179291)
 
@@ -70,9 +75,6 @@ shape = SubResource("BoxShape3D_564wm")
 transform = Transform3D(1, 0, 0, 0, 0.33046, 0, 0, 0, 0.24438, 1.1606, 1.65858, -1.98033)
 light_color = Color(1, 0, 0, 1)
 omni_range = 3.02
-
-[node name="vlc" parent="." instance=ExtResource("7_ixebm")]
-transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 4.59021, 0.200498, 0)
 
 [node name="car" parent="." instance=ExtResource("8_vcd1v")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 14.0557, 0, 3.945)

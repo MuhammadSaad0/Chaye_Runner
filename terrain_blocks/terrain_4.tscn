@@ -78,7 +78,7 @@ transform = Transform3D(0.0147941, 0, 0.00836525, 0, 0.0216, 0, -0.0225862, 0, 0
 transform = Transform3D(-0.0138014, 0, -1.20656e-09, 0, 0.0298383, 0, 1.20656e-09, 0, -0.0138014, 18.0977, -0.11931, -5.78586)
 
 [node name="bench" parent="." instance=ExtResource("6_bgwfd")]
-transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, -12.187, -0.0293999, 3.41011)
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, -14.524, -0.0293999, 3.41011)
 
 [node name="rehri" parent="." instance=ExtResource("7_0137a")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 7.34945, 0, 0)
@@ -95,9 +95,6 @@ transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 7.34945, 0, 0)
 [node name="fruit_stall" parent="." instance=ExtResource("8_81s5f")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 1.14941, 0, 3.48329)
 
-[node name="fruit_stall3" parent="." instance=ExtResource("8_81s5f")]
-transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 1.14941, 0, -1.80003)
-
 [node name="fruit_stall4" parent="." instance=ExtResource("8_81s5f")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 14.5005, 0.252149, 6.72817)
 
@@ -106,9 +103,6 @@ transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 11.1388, 0.252149
 
 [node name="fruit_stall6" parent="." instance=ExtResource("8_81s5f")]
 transform = Transform3D(-3.0598e-10, 0, 0.007, 0, 0.007, 0, -0.007, 0, -3.0598e-10, 11.1388, 0.252149, 10.4871)
-
-[node name="rehri_nofruit" parent="." instance=ExtResource("9_6bll5")]
-transform = Transform3D(-0.0053858, 0, -0.00447138, 0, 0.007, 0, 0.00447138, 0, -0.0053858, 1.97212, 0, 7.94235)
 
 [node name="rehri_nofruit3" parent="." instance=ExtResource("9_6bll5")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, -1.91038, 0, 2.49035)
@@ -126,12 +120,19 @@ shape = SubResource("BoxShape3D_1itns")
 transform = Transform3D(16.6335, 0, 0, 0, 1.807, 0, 0, 0, 12.5792, 9.13613, 0.49027, 2.62862)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188172, 0, 0.0947974)
 shape = SubResource("BoxShape3D_1itns")
 
 [node name="Area3D3" type="Area3D" parent="." groups=["Obstacle"]]
 transform = Transform3D(9.69365, 0.0221324, 0, -0.20373, 1.05308, 0, 0, 0, 3.29083, 1.68621, 0.961312, 2.70012)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+shape = SubResource("BoxShape3D_1itns")
+
+[node name="Area3D4" type="Area3D" parent="." groups=["Obstacle"]]
+transform = Transform3D(3.48145, 0.0218343, 0, -0.0731692, 1.0389, 0, 0, 0, 1.59314, 1.68621, 0.961312, 4.24378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4"]
 shape = SubResource("BoxShape3D_1itns")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
